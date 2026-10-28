@@ -1,32 +1,32 @@
-#include "mod/MyMod.h"
+#include "mod/FishMania.h"
 
 #include "ll/api/mod/RegisterHelper.h"
 
-namespace my_mod {
+namespace fish_mania {
 
-MyMod& MyMod::getInstance() {
-    static MyMod instance;
+FishMania& FishMania::getInstance() {
+    static FishMania instance;
     return instance;
 }
 
-bool MyMod::load() {
+bool FishMania::load() {
     getSelf().getLogger().debug("Loading...");
     // Code for loading the mod goes here.
     return true;
 }
 
-bool MyMod::enable() {
+bool FishMania::enable() {
     getSelf().getLogger().debug("Enabling...");
     // Code for enabling the mod goes here.
     return true;
 }
 
-bool MyMod::disable() {
+bool FishMania::disable() {
     getSelf().getLogger().debug("Disabling...");
     // Code for disabling the mod goes here.
     return true;
 }
 
-} // namespace my_mod
+} // namespace fish_mania
 
-LL_REGISTER_MOD(my_mod::MyMod, my_mod::MyMod::getInstance());
+LL_REGISTER_MOD(fish_mania::FishMania, fish_mania::FishMania::getInstance());
